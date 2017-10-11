@@ -23,5 +23,14 @@ app.use('/api',pegawaiRoute);
 let surattugasrinciRoute = require('./surattugasrinci/surattugasrinciRoute.js');
 app.use('/api',surattugasrinciRoute);
 
+let penilaianTeknisRoute = require('./penilaianTeknis/penilaianTeknisRoute.js');
+app.use('/api',penilaianTeknisRoute);
+
+ let penilaianNonTeknisRoute = require('./penilaianNonTeknis/PenilaianNonTeknisRoute.js');
+ app.use('/api',penilaianNonTeknisRoute);
+
+let penilaianAkhirRoute = require('./penilaianAkhir/penilaianAkhirRoute.js');
+app.use('/api',penilaianAkhirRoute);
+
 mong.connect('mongodb://localhost:27017/DBPelatihan');
 app.listen(8820);
