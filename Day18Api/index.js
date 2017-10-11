@@ -12,6 +12,15 @@ app.use('/', function (req, res, next) {
     next();
 })
 
+let pesertaRoute = require('./peserta/pesertaRoute');
+app.use('/api',pesertaRoute);
+
+let angkatanRencanaRoute = require('./angkatanrencana/angkatanRencanaRoute');
+app.use('/api',angkatanRencanaRoute);
+
+let angkatanAktualRoute = require('./angkatanaktual/angkatanAktualRoute');
+app.use('/api',angkatanAktualRoute);
+
 let surattugasRoute = require('./surattugas/surattugasRoute.js');
 app.use('/api',surattugasRoute);
 
