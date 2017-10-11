@@ -23,5 +23,5 @@ app.use('/api',pegawaiRoute);
 let surattugasrinciRoute = require('./surattugasrinci/surattugasrinciRoute.js');
 app.use('/api',surattugasrinciRoute);
 
-mong.connect('mongodb://localhost:27017/DBPelatihan');
+mong.connect('mongodb://ramagox:mautauaja@ds113775.mlab.com:13775/dbpelatihan');
 app.listen(8820);
