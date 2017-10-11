@@ -1,5 +1,6 @@
 let bodyParser = require('body-parser');
 let mong = require('mongoose');
+let dbconnect = require("./config/dbmongo");
 let ex = require('express');
 let app = ex();
 //route
@@ -23,5 +24,5 @@ app.use('/api',pegawaiRoute);
 let surattugasrinciRoute = require('./surattugasrinci/surattugasrinciRoute.js');
 app.use('/api',surattugasrinciRoute);
 
-mong.connect('mongodb://ramagiox:mautauaja@ds113775.mlab.com:13775/dbpelatihan');
+//mong.connect('mongodb://ramagiox:mautauaja@ds113775.mlab.com:13775/dbpelatihan');
 app.listen(8820);
