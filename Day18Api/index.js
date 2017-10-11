@@ -1,5 +1,6 @@
 let bodyParser = require('body-parser');
 let mong = require('mongoose');
+let dbconnect = require("./config/dbmongo");
 let ex = require('express');
 let app = ex();
 //route
@@ -23,5 +24,17 @@ app.use('/api',pegawaiRoute);
 let surattugasrinciRoute = require('./surattugasrinci/surattugasrinciRoute.js');
 app.use('/api',surattugasrinciRoute);
 
-mong.connect('mongodb://ramagiox:mautauaja@ds113775.mlab.com:13775/dbpelatihan');
+//mong.connect('mongodb://ramagiox:mautauaja@ds113775.mlab.com:13775/dbpelatihan');
+=======
+let penilaianTeknisRoute = require('./penilaianTeknis/penilaianTeknisRoute.js');
+app.use('/api',penilaianTeknisRoute);
+
+ let penilaianNonTeknisRoute = require('./penilaianNonTeknis/PenilaianNonTeknisRoute.js');
+ app.use('/api',penilaianNonTeknisRoute);
+
+let penilaianAkhirRoute = require('./penilaianAkhir/penilaianAkhirRoute.js');
+app.use('/api',penilaianAkhirRoute);
+
+mong.connect('mongodb://localhost:27017/DBPelatihan');
+>>>>>>> 0ce99c70f4de616a249f73f310de4e0b582874a3
 app.listen(8820);
