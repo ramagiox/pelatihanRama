@@ -35,6 +35,15 @@ app.use('/api',penilaianTeknisRoute);
 let penilaianAkhirRoute = require('./penilaianAkhir/penilaianAkhirRoute.js');
 app.use('/api',penilaianAkhirRoute);
 
+let JejakPeserta = require("./JejakPeserta/JejakPesertaRoute.js");
+app.use("/api", JejakPeserta);
+
+let KegiatanPeserta = require("./KegiatanPeserta/KegiatanPesertaRoute.js");
+app.use("/api", KegiatanPeserta);
+
+let KegiatanPesertaRinci = require("./KegiatanPesertaRinci/KegiatanPesertaRinciRoute.js");
+app.use("/api", KegiatanPesertaRinci);
+
 mong.connect('mongodb://localhost:27017/DBPelatihan');
 >>>>>>> 0ce99c70f4de616a249f73f310de4e0b582874a3
 app.listen(8820);
